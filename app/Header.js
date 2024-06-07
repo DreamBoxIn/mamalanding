@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from 'react';
+import Image from 'next/image';
 import { Transition } from '@headlessui/react';
 
 const Header = () => {
@@ -11,7 +12,7 @@ const Header = () => {
     <header className="w-full bg-white shadow-md">
       <div className="container mx-auto flex justify-between items-center px-4 py-4">
         <div className="flex items-center">
-          <img src="/logo.png" alt="Logo" className="w-12 h-12 mr-2" />
+          <Image src="/logo.png" alt="Logo" width={48} height={48} className="mr-2" />
           <h1 className="text-2xl font-bold text-gray-800">Cosmetología Merino</h1>
         </div>
         <div className="hidden md:block">

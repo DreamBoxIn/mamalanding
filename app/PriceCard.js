@@ -3,6 +3,7 @@
 "use client";
 
 import { useState } from 'react';
+import Image from 'next/image';
 import Modal from './Modal';
 
 const PriceCard = ({ title, description, price, image, details, checkoutLink }) => {
@@ -22,7 +23,7 @@ const PriceCard = ({ title, description, price, image, details, checkoutLink }) 
     <>
       <div className="max-w-sm rounded overflow-hidden shadow-lg bg-white mx-4 my-4 transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-2xl">
         <div className="flex justify-center mt-4">
-          <img className="w-24 h-24 object-cover rounded-full border-4 border-pink-300" src={image} alt={title} />
+          <Image className="rounded-full border-4 border-pink-300" src={image} alt={title} width={96} height={96} />
         </div>
         <div className="px-6 py-4">
           <div className="font-bold text-xl mb-2">{title}</div>

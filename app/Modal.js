@@ -1,5 +1,4 @@
-// app/Modal.js
-
+import Image from 'next/image';
 import React, { useEffect } from 'react';
 
 const Modal = ({ isOpen, onClose, service }) => {
@@ -34,10 +33,12 @@ const Modal = ({ isOpen, onClose, service }) => {
         </span>
         <div className="bg-pink-100 rounded-lg p-4 shadow-md">
           <div className="flex items-center">
-            <img
-              className="w-16 h-16 object-cover rounded-full border-4 border-pink-300"
+            <Image
+              className="rounded-full border-4 border-pink-300"
               src={service.image}
               alt={service.title}
+              width={64}
+              height={64}
             />
             <div className="ml-4 text-left">
               <h2 className="text-xl font-bold">{service.title}</h2>
@@ -48,7 +49,7 @@ const Modal = ({ isOpen, onClose, service }) => {
         <div className="mt-6">
           <h3 className="text-xl font-bold">Cómo usar la Gift Card</h3>
           <ol className="list-decimal list-inside mt-2 text-gray-700">
-            <li>Haz clic en "Comprar Gift Card".</li>
+            <li>Haz clic en &quot;Comprar Gift Card&quot;.</li>
             <li>Completa la compra.</li>
             <li>Recibe la Gift Card por correo o WhatsApp.</li>
             <li>Entrega la Gift Card al destinatario.</li>
